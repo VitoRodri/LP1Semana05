@@ -6,6 +6,7 @@ namespace RandomDice
     {
         static void Main(string[] args)
         {
+            int soma=0;
             Console.WriteLine("Numero de dados a lançar:");
             string r=Console.ReadLine();
             int n=Int32.Parse(r);
@@ -14,8 +15,12 @@ namespace RandomDice
 
             for (int i=0; i<n; i++)
             {
-               Console.WriteLine($"{rand.Next(1,6)}"); 
+                int dado=rand.Next(1,6);
+                soma=soma+dado;
+                Console.WriteLine($"{dado}");
             }
+            Console.WriteLine($"A soma dos dados é igual a: {soma}");
+
         }
     }
 }
